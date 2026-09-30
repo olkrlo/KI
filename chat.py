@@ -1,12 +1,6 @@
 """
-chat.py - Simulasi komunikasi DUA ARAH terenkripsi DES lewat TCP socket.
-
-Satu file ini dijalankan sebagai 2 proses/perangkat berbeda:
-  Terminal / PC A :  python chat.py --mode listen  --name Alice
-  Terminal / PC B :  python chat.py --mode connect --name Bob --host <IP_A>
-
-Kedua pihak SUDAH tahu key (--key, 8 karakter), key TIDAK dikirim lewat jaringan.
-Format frame di jaringan:  [4 byte panjang][8 byte IV][ciphertext]
+  Terminal A :  python chat.py --mode listen  --name Alice
+  Terminal B :  python chat.py --mode connect --name Bob --host <IP_A>
 """
 import argparse, socket, sys, threading, time
 from des import encrypt_cbc, decrypt_cbc
