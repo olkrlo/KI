@@ -1,3 +1,1 @@
-# KI
 
-![Uploading image.png…]()
